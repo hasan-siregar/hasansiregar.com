@@ -14,13 +14,12 @@ import type {
 
 //--- Readme Page Config ---
 export const SITE: Site = {
-  title: 'Litos',
-  description:
-    'Litos is a modern blogging theme built on Astro.js, designed for developers. It supports multiple post layouts, photo displays, project displays, and more, providing an elegant user experience and powerful customization capabilities.',
-  website: 'https://litos.vercel.app/',
+  title: 'Ahmad Hasan Siregar',
+  description: 'Ahmad Hasan Siregar is a software engineer who shares insights on technical leadership through his personal blog.',
+  website: 'https://hasansiregar.com/',
   lang: 'en',
   base: '/',
-  author: 'Dnzzk2',
+  author: 'Ahmad Hasan Siregar',
   ogImage: '/og-image.webp',
 }
 
@@ -65,20 +64,24 @@ export const FOOTER_LINKS: Link[] = [
 // get icon https://icon-sets.iconify.design/
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    name: 'github',
-    url: 'https://github.com/yourname',
-    icon: 'icon-[ri--github-fill]',
-    count: 11,
+    name: 'linkedin',
+    url: 'https://www.linkedin.com/in/hasan-siregar/',
+    icon: 'icon-[ri--linkedin-fill]',
   },
   {
     name: 'twitter',
-    url: 'https://x.com/yourname',
+    url: 'https://x.com/hsiregar05',
     icon: 'icon-[ri--twitter-x-fill]',
   },
   {
-    name: 'bilibili',
-    url: 'https://space.bilibili.com/yourSpaceId',
-    icon: 'icon-[ri--bilibili-fill]',
+    name: 'instagram',
+    url: 'https://www.instagram.com/hsiregar05/',
+    icon: 'icon-[ri--instagram-fill]',
+  },
+  {
+    name: 'github',
+    url: 'https://github.com/hasan-siregar',
+    icon: 'icon-[ri--github-fill]',
   },
 ]
 
