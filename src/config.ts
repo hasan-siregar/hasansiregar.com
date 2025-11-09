@@ -15,7 +15,7 @@ import type {
 //--- Readme Page Config ---
 export const SITE: Site = {
   title: 'Ahmad Hasan Siregar',
-  description: 'Ahmad Hasan Siregar is a software engineer who shares insights on technical leadership through his personal blog.',
+  description: 'Ahmad Hasan Siregar is a software engineer who shares insights in technical leadership through his personal blog.',
   website: 'https://hasansiregar.com/',
   lang: 'en',
   base: '/',
@@ -29,12 +29,8 @@ export const HEADER_LINKS: Link[] = [
     url: '/posts',
   },
   {
-    name: 'Projects',
-    url: '/projects',
-  },
-  {
-    name: 'Photos',
-    url: '/photos',
+    name: 'Tags',
+    url: '/tags',
   },
 ]
 
@@ -48,16 +44,8 @@ export const FOOTER_LINKS: Link[] = [
     url: '/posts',
   },
   {
-    name: 'Projects',
-    url: '/projects',
-  },
-  {
     name: 'Tags',
     url: '/tags',
-  },
-  {
-    name: 'Photos',
-    url: '/photos',
   },
 ]
 
@@ -96,7 +84,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
  * get icon https://icon-sets.iconify.design/
  */
 export const SKILLSSHOWCASE_CONFIG: SkillsShowcaseConfig = {
-  SKILLS_ENABLED: true,
+  SKILLS_ENABLED: false,
   SKILLS_DATA: [
     {
       direction: 'left',
@@ -181,17 +169,17 @@ export const SKILLSSHOWCASE_CONFIG: SkillsShowcaseConfig = {
  */
 
 export const GITHUB_CONFIG: GithubConfig = {
-  ENABLED: true,
-  GITHUB_USERNAME: 'Dnzzk2',
+  ENABLED: false,
+  GITHUB_USERNAME: 'hasan-siregar',
   TOOLTIP_ENABLED: true,
 }
 
 //--- Posts Page Config ---
 export const POSTS_CONFIG: PostConfig = {
   title: 'Posts',
-  description: 'Posts by Dnzzk2',
-  introduce: 'Here, I will share the usage instructions for this theme to help you quickly use it.',
-  author: 'Dnzzk2',
+  description: 'Posts by Ahmad Hasan Siregar',
+  introduce: 'Software engineering and technical leadership.',
+  author: 'Ahmad Hasan Siregar',
   homePageConfig: {
     size: 5,
     type: 'compact',
@@ -219,14 +207,14 @@ export const POSTS_CONFIG: PostConfig = {
 }
 
 export const COMMENT_CONFIG: CommentConfig = {
-  enabled: true,
+  enabled: false,
   system: 'gitalk',
   gitalk: {
     clientID: import.meta.env.PUBLIC_GITHUB_CLIENT_ID,
     clientSecret: import.meta.env.PUBLIC_GITHUB_CLIENT_SECRET,
     repo: 'gitalk-comment',
-    owner: 'Dnzzk2',
-    admin: ['Dnzzk2'],
+    owner: 'Ahmad Hasan Siregar',
+    admin: ['Ahmad Hasan Siregar'],
     language: 'en-US',
     perPage: 5,
     pagerDirection: 'last',
@@ -239,7 +227,7 @@ export const COMMENT_CONFIG: CommentConfig = {
 export const TAGS_CONFIG: TagsConfig = {
   title: 'Tags',
   description: 'All tags of Posts',
-  introduce: 'All the tags for posts are here, you can click to filter them.',
+  introduce: 'Explore topics you are interested in through the tags below.',
 }
 
 export const PROJECTS_CONFIG: ProjectConfig = {
