@@ -16,11 +16,17 @@ import FooterLink from '~/components/base/FooterLink.astro'
       </div>
       <div class="text-sm text-muted-foreground px-6 sm:px-8 py-4">
         <div class="items-center flex flex-wrap gap-4 font-medium">
-          <div>© 2025 All rights reserved {SITE.author}.</div>
+          <div>
+            <p>© {new Date().getFullYear()} All rights reserved {SITE.author}.</p>
+            <p class="pro text-xs font-thin text-muted-foreground">
+              This theme is inspired by <a href="https://github.com/needim" target="_blank" rel="nofollow noreferrer"> @needim</a> and redesigned
+              by <a href="https://github.com/Dnzzk2" target="_blank" rel="nofollow noreferrer"> @Dnzzk2</a> based on Astro.
+            </p>
+          </div>
           <div class="grow"></div>
           <div class="flex gap-2 items-center" transition:persist="footer-theme-toggle">
             <a
-              href="https://github.com/Dnzzk2/Litos"
+              href="https://github.com/hasan-siregar/hasansiregar.com"
               target="_blank"
               class="inline-flex items-center justify-center hover:scale-105"
               aria-label="GitHub Source"
