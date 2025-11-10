@@ -182,7 +182,8 @@ export const POSTS_CONFIG: PostConfig = {
   author: 'Ahmad Hasan Siregar',
   homePageConfig: {
     size: 5,
-    type: 'compact',
+    type: 'image',
+    coverLayout: 'right',
   },
   postPageConfig: {
     size: 10,
@@ -193,8 +194,8 @@ export const POSTS_CONFIG: PostConfig = {
     size: 10,
     type: 'time-line',
   },
-  ogImageUseCover: false,
-  postType: 'metaOnly',
+  ogImageUseCover: true,
+  postType: 'coverTop',
   imageDarkenInDark: true,
   readMoreText: 'Read more',
   prevPageText: 'Previous',
