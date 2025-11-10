@@ -1,0 +1,64 @@
+---
+title: 'Why Smaller, Stacked PRs Work (even with merge conflicts!)'
+description: 'Benefits of smaller, stacked pull requests in software development'
+pubDate: 2025-09-23
+author: 'Ahmad Hasan Siregar'
+cover: 'assets/cover.png'
+tags: ['software-engineering', 'workflow']
+---
+
+> Starts with concrete, tactical, and practical point of discussion. See at the bottom for foundational principles and values.
+
+Recently our team started making smaller PRs and stacking them. Here is my reasoning on justifying why smaller PRs is better than a big(ger) one even with several administrative overheads as mentioned below.
+
+### Here are the pros:
+
+- Reduce the chunk of focus block the reviewer (me :smile:) needed to carve out of their time
+- Get the PR reviewed faster (and merged faster) enabling faster feedback cycle (and less context switch in-terms of days)
+
+### Cons:
+
+- Requires some thinking on how to split the code into reasonable chunks
+- PR stacking yield merge conflict
+
+1st cons aint real. Provides better structured thinking and better code isolation and responsibility. In blunt context, reduce the chance of spaghetti code because the stubbed out code provides strong separation of concern needed that just this part of currently implemented code (skeleton code) is sufficient enough to produce good understanding of what is it doing without the underlying implementation details.
+
+## Tactical Tips
+
+### 1. Direction of Change
+
+- You can start bottom-up such as DDL, domain, data layer.
+  - Pros: you build from smaller building blocks. So nothing get stub out and everything is concrete.
+  - Cons: Sometimes bottom up is hard because the read/write pattern is not clear.
+- Can start top-down from Routes + Service:
+  - Pros: clear read/write pattern yields more focused responsibility on data layer
+  - Cons: stubbed out code, Pagination may be unwieldy to stub
+
+2nd cons is something that I'd trade for the pros listed. Of course it's biased as it helps me review code faster. But I still think let say just the sake of getting code merged faster is already a plus for everybody. Plus the rest of pros laid out above
+
+### **2. Separate Refactoring from Features**
+
+A common cause of huge PRs is mixing a large refactor with a new feature. The rule should be:
+
+- **PR #1:** The refactoring. (e.g., "Refactor Service Layer to use new pattern").
+- **PR #2:** The new feature, built on top of the refactored code.
+
+### **3. Use Feature Flags**
+
+For large, multi-day features, the work should be done behind a feature flag. This allows developers to merge incomplete, incremental PRs into the main branch without affecting users. The 1000-line feature can be broken down into 2–3 coherent, digestible PRs.
+
+## Principles & Values
+
+### 1. Short(en) Feedback Cycle
+
+Short(er) cycle for feedback is fundamentals for developer experience. Getting feedback early enables us to iterate changes more frequently which reduce risks of diverting too far from the correct “line” (note, nobody knows what’s the correct “line“, but we can move in smaller steps in what we think is better that current position).
+
+Short(er) feedback cycle also reduce context switching as PRs get reviewed in 2 days, instead of 4 days later when we’ve moved on to another feature we’re working on with another set of contextual business domain that we need to keep track mentally in our working memory.
+
+This can be achieved by reviewing PRs immediately. But, most of reviewers don’t have a good chunk of 2 hours of highlyfocused block in their day to review a PR of 1,000 lines of **reviewable** code (includes production, tests, and boilerplate; excludes generated code, dependencies, and large data files). So it’s important for software engineers to be able to split their work into smaller, digestible chunk of PRs with various tactical tips laid out above ([Tactical Tips](https://quip-apple.com/zU4LAmRiYb9S#temp:C:fZH193e08e5605f479bb8cf4de0f)).
+
+> https://mtlynch.io/human-code-reviews-1/#start-reviewing-immediately
+
+Based on multiple researches such as [SmartBear — best practices for peer code review](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/), reviewer takes about 1 hour per 500 LoC reviewed. Any rates faster than that, it shows a significant drop in defect density.
+
+> Reviewer takes about 1 hour per 500 LoC reviewed.
