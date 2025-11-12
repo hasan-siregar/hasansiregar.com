@@ -39,8 +39,6 @@ const recommendText = POSTS_CONFIG.recommendText
 
     <header class="px-6 sm:px-8 py-6">
       <div class="max-w-3xl mx-auto">
-        {frontmatter.description && <p class="text-sm text-muted-foreground/90 leading-relaxed mb-4">{frontmatter.description}</p>}
-
         <div class="space-y-3 sm:space-y-4">
           <div
             data-pagefind-body
@@ -48,6 +46,8 @@ const recommendText = POSTS_CONFIG.recommendText
           >
             {frontmatter.title}
           </div>
+
+          {frontmatter.description && <p class="text-sm text-muted-foreground/90 leading-relaxed italic">{frontmatter.description}</p>}
         </div>
 
         <div class="flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-muted-foreground/85 mt-4">
