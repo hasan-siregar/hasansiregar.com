@@ -2,6 +2,10 @@
 
 A modern blog theme built with Astro.js and designed for developers.
 
+## Environments
+
+* Production: [hasansiregar.com](https://hasansiregar.com/)
+
 ## Features
 
 - Built on Astro.js for lightning-fast builds
