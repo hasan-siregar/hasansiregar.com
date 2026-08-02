@@ -6,6 +6,8 @@ A modern blog theme built with Astro.js and designed for developers.
 
 * Production: [hasansiregar.com](https://hasansiregar.com/)
 
+> Deployed to Cloudflare Workers via Wrangler
+
 ## Features
 
 - Built on Astro.js for lightning-fast builds
